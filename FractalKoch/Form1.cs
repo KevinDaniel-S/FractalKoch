@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FractalKoch
 {
-    public partial class Form1 : Form
+    public partial class FractalKoch : Form
     {
-        public Form1()
+        public FractalKoch()
         {
             InitializeComponent();
         }

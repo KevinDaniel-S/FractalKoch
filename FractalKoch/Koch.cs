@@ -15,20 +15,20 @@ namespace FractalKoch
         Graphics g = null;
         Fractal f = new Fractal();
 
+        public int Nivel { get; set; } = 0;
+        public int Lados { get; set; } = 0;
+
         public FractalKoch()
         {
             InitializeComponent();
             g = this.CreateGraphics();
+            g.TranslateTransform(this.Width/2,this.Height/2);
         }
-
-        public int Nivel { get; set; } = 0;
-        public int Lados { get; set; } = 0;
-        
 
         private void botonAumentar_Click(object sender, EventArgs e)
         {
             Nivel++;
-            f.DibujarKoch(1, 1, g);
+            f.DibujarKoch(4, 1, 50, g);
         }
 
         private void botonDisminuir_Click(object sender, EventArgs e)

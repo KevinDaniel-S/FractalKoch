@@ -9,12 +9,24 @@ namespace FractalKoch
 {
     public class Fractal
     {
-        Pen lapiz = new Pen(Color.DarkBlue,10);
-        
+        Pen lapiz = new Pen(Color.GreenYellow, 2);
 
-        public void DibujarKoch(int lados, int nivel,Graphics g)
+        public void DibujarKoch(int lados, int nivel, float largo, Graphics g)
         {
-            g.DrawLine(lapiz,10,10,100,100);
+            float x = 0;
+            float y = 0;
+            float x1;
+            float y1;
+
+            for (int i = 0; i < lados; i++)
+            {
+                x1 = x + largo * (float)(Math.Sin(90 * (i + 1)));
+                y1 = y + largo * (float)(Math.Cos(90 * (i + 1)));
+                g.DrawLine(lapiz, x, y, x1, y1);
+                x = x1;
+                y = y1;
+            }
+            
         }
     }
 }

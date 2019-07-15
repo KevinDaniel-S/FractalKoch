@@ -43,6 +43,7 @@
             this.botonAumentar.TabIndex = 0;
             this.botonAumentar.Text = "Nivel ++";
             this.botonAumentar.UseVisualStyleBackColor = true;
+            this.botonAumentar.Click += new System.EventHandler(this.botonAumentar_Click);
             // 
             // botonDisminuir
             // 
@@ -52,6 +53,7 @@
             this.botonDisminuir.TabIndex = 1;
             this.botonDisminuir.Text = "Nivel --";
             this.botonDisminuir.UseVisualStyleBackColor = true;
+            this.botonDisminuir.Click += new System.EventHandler(this.botonDisminuir_Click);
             // 
             // numericUpDown1
             // 

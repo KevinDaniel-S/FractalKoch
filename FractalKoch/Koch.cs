@@ -22,13 +22,14 @@ namespace FractalKoch
         {
             InitializeComponent();
             g = this.CreateGraphics();
-            g.TranslateTransform(this.Width/2,this.Height/2);
+            g.TranslateTransform(0,this.Height);
+            g.ScaleTransform(1,-1);
         }
 
         private void botonAumentar_Click(object sender, EventArgs e)
         {
             Nivel++;
-            f.DibujarKoch(4, 1, 50, g);
+            f.DibujarKoch(4, 1, 200, g);
         }
 
         private void botonDisminuir_Click(object sender, EventArgs e)

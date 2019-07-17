@@ -13,15 +13,15 @@ namespace FractalKoch
 
         public void DibujarKoch(int lados, int nivel, float largo, Graphics g)
         {
-            float x = 0;
-            float y = 0;
+            float x = 10;
+            float y = 50;
             float x1;
             float y1;
 
             for (int i = 0; i < lados; i++)
             {
-                x1 = x + largo * (float)(Math.Sin(90 * (i + 1)));
-                y1 = y + largo * (float)(Math.Cos(90 * (i + 1)));
+                x1 = x + largo * (float)(Math.Sin(Math.PI/2 * i));
+                y1 = y + largo * (float)(Math.Cos(Math.PI/2 * i));
                 g.DrawLine(lapiz, x, y, x1, y1);
                 x = x1;
                 y = y1;

@@ -20,8 +20,8 @@ namespace FractalKoch
 
             for (int i = 0; i < lados; i++)
             {
-                x1 = x + largo * (float)(Math.Sin(Math.PI/2 * i));
-                y1 = y + largo * (float)(Math.Cos(Math.PI/2 * i));
+                x1 = x + largo * (float)(Math.Sin(2*Math.PI/lados * i));
+                y1 = y + largo * (float)(Math.Cos(2*Math.PI/lados * i));
                 g.DrawLine(lapiz, x, y, x1, y1);
                 x = x1;
                 y = y1;

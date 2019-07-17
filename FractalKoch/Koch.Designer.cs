@@ -30,9 +30,9 @@
         {
             this.botonAumentar = new System.Windows.Forms.Button();
             this.botonDisminuir = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numeroLados = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroLados)).BeginInit();
             this.SuspendLayout();
             // 
             // botonAumentar
@@ -55,22 +55,23 @@
             this.botonDisminuir.UseVisualStyleBackColor = true;
             this.botonDisminuir.Click += new System.EventHandler(this.botonDisminuir_Click);
             // 
-            // numericUpDown1
+            // numeroLados
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(418, 22);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numeroLados.Location = new System.Drawing.Point(418, 22);
+            this.numeroLados.Minimum = new decimal(new int[] {
             3,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(39, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numeroLados.Name = "numeroLados";
+            this.numeroLados.Size = new System.Drawing.Size(39, 20);
+            this.numeroLados.TabIndex = 2;
+            this.numeroLados.Value = new decimal(new int[] {
             3,
             0,
             0,
             0});
+            this.numeroLados.ValueChanged += new System.EventHandler(this.numeroLados_ValueChanged);
             // 
             // label1
             // 
@@ -88,12 +89,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 300);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numeroLados);
             this.Controls.Add(this.botonDisminuir);
             this.Controls.Add(this.botonAumentar);
             this.Name = "FractalKoch";
             this.Text = "Fractal Koch";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroLados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,7 +104,7 @@
 
         private System.Windows.Forms.Button botonAumentar;
         private System.Windows.Forms.Button botonDisminuir;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numeroLados;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -13,8 +13,8 @@ namespace FractalKoch
 
         public void DibujarKoch(int lados, int nivel, float largo, Graphics g)
         {
-            float x = 10;
-            float y = 50;
+            float x = 100;
+            float y = 50 + lados * 3;
             float x1;
             float y1;
 

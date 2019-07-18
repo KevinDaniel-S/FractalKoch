@@ -28,20 +28,25 @@ namespace FractalKoch
         private void botonAumentar_Click(object sender, EventArgs e)
         {
             Nivel++;
-            g.Clear(Color.WhiteSmoke);
-            f.DibujarKoch(Lados, Nivel, 200, g);
+            Actualizar();
         }
 
         private void botonDisminuir_Click(object sender, EventArgs e)
         {
             Nivel--;
+            Actualizar();
         }
 
         private void numeroLados_ValueChanged(object sender, EventArgs e)
         {
+            Actualizar();
+        }
+
+        private void Actualizar()
+        {
             g.Clear(Color.WhiteSmoke);
             Lados = (int)numeroLados.Value;
-            f.DibujarKoch(Lados, Nivel, 200, g);
+            f.DibujarKoch(Lados, Nivel, 700 / Lados, g);
         }
     }
 }

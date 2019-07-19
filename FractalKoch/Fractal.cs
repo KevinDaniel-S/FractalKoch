@@ -14,7 +14,16 @@ namespace FractalKoch
         public void DibujarKoch(int lados, int nivel, float largo, Graphics g)
         {
             float x = 100;
-            float y = 50 + lados * 3;
+            float y;
+            if (lados <= 4)
+            {
+                y = 50;
+            }
+            else
+            {
+                y = 50 + lados * (float)4.2;
+            }
+            
             float x1;
             float y1;
 
